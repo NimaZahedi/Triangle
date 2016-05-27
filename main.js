@@ -1,4 +1,10 @@
-import {Triangle} from "./triangle";
+import {getType} from "./triangle";
 
+const args = process.argv[2].split(',');
+const sides = [];
 
- Triangle(process.argv[2]);
+for (let arg of args) {
+    sides.push(Number(arg));
+}
+
+console.log(getType(sides));

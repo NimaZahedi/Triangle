@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "mocha --require babel-core/register --reporter=nyan *.spec.js",
-    "serve": "babel-node main.js"
+    "start": "babel-node main"
   },
   "author": "Nima Zahedi",
   "license": "MIT"
