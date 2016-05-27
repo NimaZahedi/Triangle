@@ -1,6 +1,6 @@
 import {expect} from "chai";
 
-import {Triangle} from "./triangle.class";
+import {Triangle} from "./triangle-class";
 import {Errors} from "./error";
 
 let triangle;
