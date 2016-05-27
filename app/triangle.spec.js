@@ -9,7 +9,7 @@ describe('triangle', () => {
     });
 });
 
-describe('#getType()', () => {
+describe('triangle#getType()', () => {
     it('3 arguments should be defined and integer', () => {
 
         const error = Errors.sidesDefinitionError;
@@ -33,7 +33,7 @@ describe('#getType()', () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle#getType()", () => {
     it("should only accept this pattern as sides: (x + y > z) | (x + z > y) | (z + y > x)", () => {
 
         const error = Errors.validTriangleError;
@@ -54,7 +54,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle#getType()", () => {
     it("triangle's type should be equilateral with this sides: (x, x, x) ", () => {
 
         const type = "equilateral";
@@ -70,7 +70,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle#getType()", () => {
     it("triangle's type should be isosceles with this sides: (x, x, y) ", () => {
 
         const type = "isosceles";
@@ -86,7 +86,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle#getType()", () => {
     it("triangle's type should be scalene with this sides: (x, y, z) ", () => {
 
         const type = "scalene";

@@ -9,14 +9,14 @@ before(() => {
     triangle = new Triangle(1, 2, 2);
 });
 
-describe('triangle', () => {
+describe('triangle-class', () => {
     it('should exist', () => {
         expect(Triangle).not.to.be.undefined;
     });
 });
 
 
-describe('#getType()', () => {
+describe('triangle-class#setSides()', () => {
     it('3 arguments should be defined and number', () => {
 
         const error = Errors.sidesDefinitionError;
@@ -40,7 +40,7 @@ describe('#getType()', () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle-class#setSides()", () => {
     it("should only accept this pattern as sides: (x + y > z) | (x + z > y) | (z + y > x)", () => {
 
         const error = Errors.validTriangleError;
@@ -61,7 +61,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle-class#getType()", () => {
     it("triangle's type should be equilateral with this sides: (x, x, x) ", () => {
 
         const type = "equilateral";
@@ -82,7 +82,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle-class#getType()", () => {
     it("triangle's type should be isosceles with this sides: (x, x, y) ", () => {
 
         const type = "isosceles";
@@ -103,7 +103,7 @@ describe("#getType()", () => {
     });
 });
 
-describe("#getType()", () => {
+describe("triangle-class#getType()", () => {
     it("triangle's type should be scalene with this sides: (x, y, z) ", () => {
 
         const type = "scalene";
