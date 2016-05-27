@@ -26,7 +26,7 @@ By this approach I need to call IsValid function each time that getType function
 
 ###### Note
 
-both approaches support sending arguments as separate numbers like ```(1, 2, 3)```, or  as a single array like ```([1, 2, 2])``` -overloading-.
+Both approaches support sending arguments as separate numbers like ```(1, 2, 3)```, or  as a single array like ```([1, 2, 2])``` -overloading-.
 
 ## Class vs Function
 
