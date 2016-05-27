@@ -24,12 +24,14 @@ This module also has 3 private functions called: isVlid, sidesValidator and isTr
 This approach also has those private functions -isVlid, sidesValidator, isTriangle- and exports getType function. this function accepts 3 arguments as triangle’s sides.
 By this approach I need to call IsValid function each time that getType function is called! because validation should be run before that!
 
+###### Note
+
+both approaches support sending arguments as separate numbers like ```(1, 2, 3)```, or  as a single array like ```([1, 2, 2])``` -overloading-.
+
 ## Class vs Function
 
 It seems Class is fit for this scenario, because my object -Triangle- has couple of behaviours -getType, isValid-, but on the other hand by the new style of JS programming -(import/export)/module based- everything is like a class and we don’t need to have such a thing. For example right now I’ve created a class with only  getType function but not any other functions! On the other hand, class based approach’s flow is bit easier than the other one, for example I don’t need to call isValid at the beginning of the getType function, in the constructor or setSides, isValid was already called and everything is okay to return the triangle type.
 Long story short, both approaches are good enough for this scenario.
-
-Note: both approaches support sending arguments as separate numbers like ```(1, 2, 3)```, or  as a single array like ```([1, 2, 2])``` -overloading-.
 
 ## Usage
   * If you have problem with babel please follow these steps:
