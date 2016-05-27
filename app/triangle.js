@@ -44,7 +44,7 @@ function sidesValidatior(side1, side2, side3) {
     else if (Array.isArray(side1)) {
 
         if (side1.every((s) => typeof s === "number"))
-            return side1;
+            return side1.slice(0,3);
         else
             throw new Error(Errors.sidesDefinitionError);
 

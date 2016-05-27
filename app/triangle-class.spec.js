@@ -33,8 +33,6 @@ describe('#getType()', () => {
         expect(() => triangle.setSides(1, 2, false)).throw(error);
         expect(() => triangle.setSides(1, { value: 2 }, 3)).throw(error);
         expect(() => triangle.setSides("1", 2, 3)).throw(error);
-        expect(() => triangle.setSides(-1, 2, 2)).not.throw(error);
-        expect(() => triangle.setSides(1, -2, 0)).not.throw(error);
 
         expect(() => { triangle.setSides(1, 2, 2) }).not.throw(error);
         expect(() => triangle.setSides([1, 2, 2])).not.throw(error);
@@ -54,6 +52,8 @@ describe("#getType()", () => {
         expect(() => triangle.setSides([10, 2, 1])).throw(error);
         expect(() => triangle.setSides([1, 10, 2])).throw(error);
         expect(() => triangle.setSides(1, 2, 3)).throw(error);
+        expect(() => triangle.setSides(-1, 2, 2)).throw(error);
+        expect(() => triangle.setSides(1, -2, 0)).throw(error);
 
         expect(() => triangle.setSides(1, 2, 2)).not.throw(error);
         expect(() => triangle.setSides([1, 2, 2])).not.throw(error);
@@ -71,6 +71,14 @@ describe("#getType()", () => {
 
         triangle.setSides([2, 2, 2]);
         expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 2, 2, 3]);
+        expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 3, 4, 3]);
+        expect(triangle.getType()).not.to.equal(type);
+        expect(triangle.getType()).not.to.equal("isosceles");
+        expect(triangle.getType()).to.equal("scalene");
     });
 });
 
@@ -84,6 +92,14 @@ describe("#getType()", () => {
 
         triangle.setSides([2, 2, 3]);
         expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 2, 3, 1]);
+        expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 2, 3, 2]);
+        expect(triangle.getType()).to.equal(type);
+        expect(triangle.getType()).not.to.equal("equilateral");
+        expect(triangle.getType()).to.equal(type);
     });
 });
 
@@ -96,6 +112,13 @@ describe("#getType()", () => {
 
         triangle.setSides([2, 4, 3]);
         expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 4, 3, 6]);
+        expect(triangle.getType()).to.equal(type);
+
+        triangle.setSides([2, 4, 3, 2]);
+        expect(triangle.getType()).to.equal(type);
+        expect(triangle.getType()).not.to.equal("isosceles");
 
     });
 });
