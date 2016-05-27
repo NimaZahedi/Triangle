@@ -7,4 +7,9 @@ for (let arg of args) {
     sides.push(Number(arg));
 }
 
-console.log(getType(sides));
+try {
+    console.log(getType(sides));
+}
+catch (e) {
+    console.log(`Error Name: ${e.name}, message: ${e.message}`);
+}
