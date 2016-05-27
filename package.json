@@ -2,7 +2,7 @@
   "name": "tradeshift",
   "version": "1.0.0",
   "description": "This is the assignment",
-  "main": "triangle.js",
+  "main": "app/triangle.js",
   "dependencies": {
   },
   "devDependencies": {
@@ -14,8 +14,8 @@
     "tsd": "^0.6.5"
   },
   "scripts": {
-    "test": "mocha --require babel-core/register --reporter=nyan *.spec.js",
-    "start": "babel-node main"
+    "test": "mocha --require babel-core/register --reporter=nyan app/*.spec.js",
+    "start": "babel-node app/main"
   },
   "author": "Nima Zahedi",
   "license": "MIT"
