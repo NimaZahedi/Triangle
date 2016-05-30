@@ -34,7 +34,6 @@ It seems Class is fit for this scenario, because my object -Triangle- has couple
 Long story short, both approaches are good enough for this scenario.
 
 ## Usage
-
   * `npm install`
   * scripts
     *  Start
