@@ -34,9 +34,7 @@ It seems Class is fit for this scenario, because my object -Triangle- has couple
 Long story short, both approaches are good enough for this scenario.
 
 ## Usage
-  * If you have problem with babel please follow these steps:
-    * `npm uninstall --global babel-cli`
-    * `npm install --save-dev babel-cli`
+
   * `npm install`
   * scripts
     *  Start
